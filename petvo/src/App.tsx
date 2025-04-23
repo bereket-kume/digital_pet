@@ -45,45 +45,6 @@ declare global {
   }
 }
 
-interface Message {
-  content: string;
-  sender: 'user' | 'pet';
-}
-
-interface PetSetup {
-  name: string;
-  image: string;
-  personality: string;
-  hobbies: string[];
-  userName: string;
-}
-
-const defaultPetImages = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500', name: 'Cute Dog' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500', name: 'Playful Cat' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=500', name: 'Happy Bunny' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500', name: 'Curious Fox' }
-];
-
-const personalityOptions = [
-  'Playful and energetic',
-  'Calm and wise',
-  'Curious and adventurous',
-  'Friendly and social',
-  'Independent and mysterious'
-];
-
-const hobbyOptions = [
-  'Playing fetch',
-  'Solving puzzles',
-  'Learning new tricks',
-  'Exploring nature',
-  'Making new friends',
-  'Collecting treasures',
-  'Telling stories',
-  'Singing songs'
-];
-
 function AppContent() {
   const { petSetup, messages, addMessage } = usePet();
   const [isLoading, setIsLoading] = useState(false);

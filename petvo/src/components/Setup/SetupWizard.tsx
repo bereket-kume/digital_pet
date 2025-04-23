@@ -9,7 +9,7 @@ import { HobbiesSetup } from './steps/HobbiesSetup';
 type SetupStep = 'user' | 'name' | 'image' | 'personality' | 'hobbies' | 'complete';
 
 export const SetupWizard = () => {
-  const { petSetup, setPetSetup, savePetSetup, addMessage } = usePet();
+  const { petSetup, savePetSetup, addMessage } = usePet();
   const [setupStep, setSetupStep] = useState<SetupStep>('user');
 
   const handleSetupComplete = async () => {

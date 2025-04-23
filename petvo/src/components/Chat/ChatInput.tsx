@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { usePet } from '../../context/PetContext';
 
 interface ChatInputProps {
   isLoading: boolean;
